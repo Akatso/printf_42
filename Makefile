@@ -5,6 +5,7 @@ SRC = ft_putchar.c \
 	  ft_putnbr.c \
 	  ft_puthexa.c \
 	  ft_putptr.c \
+	  ft_putu.c \
 	  ft_strlen.c \
 	  ft_printf.c
 
