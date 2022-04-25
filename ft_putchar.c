@@ -1,7 +1,7 @@
 #include "ft_printf.h"
 #include <unistd.h>
 
-void	ft_putchar(char c)
+size_t	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }

@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-size_t	ft_putnbr(long int nb)
+size_t	ft_puthexa(long int nb, const char *base)
 {
 	int	i;
 	size_t count;
@@ -8,21 +8,16 @@ size_t	ft_putnbr(long int nb)
 
 	i = 0;
 	count = 0;
-	if (nb < 0)
-	{
-		count = ft_putchar('-');
-		nb *= -1;
-	}
 	if (nb == 0)
 		count = ft_putchar('0');
 	while (nb > 0)
 	{
-		tab[i++] = nb % 10;
-		nb /= 10;
+		tab[i++] = base[nb % 16];
+		nb /= 16;
 	}
 	count += i;
 	i--;
 	while (i >= 0)
-		ft_putchar(tab[i--] + 48);
+		ft_putchar(tab[i--]);
 	return (count);
 }

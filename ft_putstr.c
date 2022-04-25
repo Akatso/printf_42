@@ -1,14 +1,7 @@
 #include "ft_printf.h"
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+size_t	ft_putstr(char *s)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		write(1, &(str[i]), 1);
-		i++;
-	}
+	return(write(1, s, ft_strlen(s)));
 }
