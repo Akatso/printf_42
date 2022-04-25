@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-size_t	ft_puthexa(long int nb, const char *base)
+size_t	ft_puthexa(long int nb, char *base)
 {
 	int	i;
 	size_t count;
