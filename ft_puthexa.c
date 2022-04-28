@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: slepetit <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/28 14:53:06 by slepetit          #+#    #+#             */
+/*   Updated: 2022/04/28 22:39:12 by slepetit         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-size_t	ft_puthexa(long int nb, char *base)
+size_t	ft_puthexa(unsigned long nb, char *base)
 {
-	int	i;
-	size_t count;
-	int	tab[20];
+	size_t	count;
+	int		i;
+	int		tab[20];
 
-	i = 0;
 	count = 0;
+	i = 0;
 	if (nb == 0)
 		count = ft_putchar('0');
 	while (nb > 0)

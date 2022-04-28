@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putu.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: slepetit <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/28 14:53:44 by slepetit          #+#    #+#             */
+/*   Updated: 2022/04/28 22:37:57 by slepetit         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-size_t	ft_putu(unsigned int nb)
+size_t	ft_putu(unsigned long long nb, char *base)
 {
-	int	i;
-	size_t count;
-	int	tab[20];
+	size_t	count;
+	int		i;
+	int		tab[100];
 
-	i = 0;
 	count = 0;
+	i = 0;
 	if (nb == 0)
 		count = ft_putchar('0');
-	while (nb > 0)
+	while (nb >= 1)
 	{
-		tab[i++] = nb % 10;
+		tab[i++] = base[nb % 10];
 		nb /= 10;
 	}
 	count += i;
